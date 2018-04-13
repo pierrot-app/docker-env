@@ -1,0 +1,37 @@
+[
+    {
+    "input": "recette dessert maintenant tomate vegan vege",
+    "key": "tomate",
+    "status": "recette",
+    "time": "maintenant",
+    "goal": "dessert",
+    "peoples": 2,
+    "astuce": "une super astuce de tomate",
+    "recette": "une super recette de tomate",
+    "tags": [
+        {
+            "tag": "vegan",
+            "power": 1
+        },
+        {
+            "tag": "vege",
+            "power": 2
+        },
+        {
+            "tag": "sportif",
+            "power": 3
+        }
+    ]
+},
+{
+    "input": "recette dessert maintenant tomate vegan vege",
+    "key": "tomate",
+    "status": "recette",
+    "time": "maintenant",
+    "goal": "dessert",
+    "peoples": 2,
+    "astuce": "une super astuce de tomate",
+    "recette": "une super recette de tomate",
+    "tags": ["vegan", "sportif"]
+}
+]

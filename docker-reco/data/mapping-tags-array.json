@@ -1,0 +1,33 @@
+{
+    "mappings": {
+        "doc": {
+            "properties": {
+                "input": {
+                    "type": "text"
+                },
+                "key": {
+                    "type": "keyword"
+                },
+                "status": {
+                    "type": "keyword"
+                },
+                "time": {
+                    "type": "keyword"
+                },
+                "goal": {
+                    "type": "keyword"
+                },
+                "peoples": {
+                    "type": "integer"
+                },
+                "astuce": {
+                    "type": "text"
+                },
+                "recette": {
+                    "type": "text"
+                },
+                "tags": []
+            }
+        }
+    }
+}

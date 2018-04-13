@@ -1,0 +1,40 @@
+[
+    {
+    "query": {
+        "function_score": {
+          "query": {
+          "bool": {
+              "must": [
+                  {
+                  "nested": {
+                      "path": "tags",
+                      "query": {
+                      "bool": {
+                          "should": [
+                            {
+                              "match_phrase": {
+                                    "tags.type": "sportif"
+                              }
+                            },
+                            {
+                                "match_phrase": {
+                                    "tags.type": "vege"
+                                }
+                            }
+                          ]
+                      }
+                      }
+                  }
+                  }
+              ]
+              }
+        },
+         "script_score" : {
+              "script" : {
+                  "source": "doc['tags.power'].value"
+              }
+          }
+      }
+    }
+  }
+] 
