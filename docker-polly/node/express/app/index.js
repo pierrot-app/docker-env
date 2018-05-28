@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.send('convert text to speech !!!')
+  res.send('convert text to speech !!')
 })
 
-app.listen(7000, function () {
-  console.log('Example app listening on port 7000!')
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
 })

@@ -7,11 +7,20 @@
 - docker ps -a
 - docker exec -i servicename bash
 
+### docker-destroy-all.sh
+  #!/bin/bash
+  # Stop all containers
+  docker stop $(docker ps -a -q)
+  # Delete all containers
+  docker rm $(docker ps -a -q)
+  # Delete all images
+  docker rmi $(docker images -q)
 
 ---------------------------
 ### TODO
-fake profile et produit
-ecrire documentation par projet
+  - fake profile et produit
+  - ecrire documentation par projet
+  - test double nginx location
 
 #### TODO docker-api
 - Gerer secu et hosts

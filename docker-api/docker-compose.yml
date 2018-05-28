@@ -6,12 +6,11 @@ services:
       context: ./node
       args:
         NODE_ENV: ${NODE_ENV}
-    container_name: 'service-express'
+    container_name: 'service-api'
     volumes:
       - ./node/express:/var/www/express
     ports:
-      - '3000-3004:3000-3004'
-      - '7000-7004:7000-7004'
+      - '7000-7020:7000-7020'
     command: npm run ${NODE_ENV}
   nginx:
     tty: true
