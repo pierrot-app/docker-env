@@ -1,0 +1,4 @@
+#### Docker API
+
+##### app pierrotapp.host in your hosts file
+> 127.0.0.1 pierrotapp.host

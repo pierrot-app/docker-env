@@ -1,0 +1,14 @@
+version: '3'
+services:
+  debian:
+    build: ./debian
+    container_name: debian
+    ports:
+      - 80:80
+    networks:
+      - esnet
+    tty: true
+
+networks:
+  esnet:
+      driver: bridge
