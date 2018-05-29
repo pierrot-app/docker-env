@@ -1,20 +1,18 @@
 # Docker
 
-### Basic CMD
+### Environnements :
+- api : middleware api
+- elk (elasticsearch, kibana, logstash): search product by score
+- mongo: save users profils
+- polly: TTS (create .mp3 response)
+- snips: dev and test 
+
+### Basic CMD : 
 - docker-compose build
 - docker-compose up
 - docker-compose up -d
 - docker ps -a
 - docker exec -i servicename bash
-
-### docker-destroy-all.sh
-  #!/bin/bash
-  # Stop all containers
-  docker stop $(docker ps -a -q)
-  # Delete all containers
-  docker rm $(docker ps -a -q)
-  # Delete all images
-  docker rmi $(docker images -q)
 
 ---------------------------
 ### TODO
