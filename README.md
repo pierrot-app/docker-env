@@ -20,7 +20,8 @@
 ### TODO
   - fake profile et produit
   - ecrire documentation par projet
-  - test double nginx location
+  - referencé reseau ELK et mongo
+  - create location /profil and /search
 
 #### TODO docker-api
 - Gerer secu et hosts
