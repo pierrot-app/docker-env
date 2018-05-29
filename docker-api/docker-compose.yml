@@ -8,7 +8,7 @@ services:
         NODE_ENV: ${NODE_ENV}
     container_name: 'service-api'
     volumes:
-      - ./node/express:/var/www/express
+      - ${NODE_PATH}:/var/www/express
     ports:
       - '7000-7020:7000-7020'
     command: npm run ${NODE_ENV}

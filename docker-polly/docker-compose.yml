@@ -8,7 +8,7 @@ services:
         NODE_ENV: ${NODE_ENV}
     container_name: 'service-polly'
     volumes:
-      - ./node/express:/var/www/express
+      - ${NODE_PATH}:/var/www/express
     ports:
-      - '3000-30020:3000-30020'
+      - '3000-3020:3000-3020'
     command: npm run ${NODE_ENV}
