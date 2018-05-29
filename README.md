@@ -19,7 +19,8 @@
   - fake profile et produit
   - ecrire documentation par projet
   - referencé reseau ELK et mongo
-  - create location /profil and /search
+  - create location /profils/:id, /search/products/:id, /speach/:text
+  - check docker-snips
 
 #### TODO docker-api
 - Gerer secu et hosts
