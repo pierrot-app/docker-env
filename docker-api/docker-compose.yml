@@ -1,4 +1,7 @@
 version: '3'
+networks:
+  docker-polly_node-default:
+    external: true
 services:
   node:
     tty: true
@@ -18,7 +21,7 @@ services:
     container_name: 'service-nginx'
     ports:
       - '80:80'
+    networks:
+      - default
+      - docker-polly_node-default
 
-networks:
-  esnet:
-      driver: bridge
