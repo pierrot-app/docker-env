@@ -6,9 +6,9 @@ services:
     ports:
       - 80:80
     networks:
-      - esnet
+      - snips-net
     tty: true
 
 networks:
-  esnet:
+  snips-net:
       driver: bridge

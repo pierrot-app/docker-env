@@ -8,16 +8,10 @@ LABEL Quentin Tshaimanga
 
 ENV DEBIAN_FRONTEND noninteractive
 
-#INSTALL ALL
+# Update and install Utils
 RUN apt-get update &&\
     apt-get install -y apt-utils
     
-
-# Install OMYZSH
-# RUN ["apt-get", "update"]
-# RUN ["apt-get", "install", "-y", "zsh"]
-# RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
-
 # Install systemd-sysv
 RUN apt install -y systemd-sysv
 
@@ -33,9 +27,7 @@ RUN apt-get install -y alsa-utils
 #Install mosquitto
 RUN apt-get install -y libc-ares2 libmosquitto1 libwrap0 tcpd mosquitto mosquitto-clients
 
-# 1. Configure network access: WIFI
-# 2. Enable SSH
-# 3. Install the Snips Platform
+# Install Snips Platform
 RUN apt-get install -y dirmngr
 RUN bash -c  'echo "deb https://debian.snips.ai/$(lsb_release -cs) stable main" > /etc/apt/sources.list.d/snips.list'
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys F727C778CCB0A455
