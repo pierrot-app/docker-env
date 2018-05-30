@@ -1,6 +1,10 @@
 version: '3'
 networks:
-  docker-polly_node-default:
+  docker-polly_node-net:
+    external: true
+  docker-elk_es-net:
+    external: true
+  docker-mongo_mongo-net:
     external: true
 services:
   node:
@@ -23,5 +27,7 @@ services:
       - '80:80'
     networks:
       - default
-      - docker-polly_node-default
+      - docker-polly_node-net
+      - docker-elk_es-net
+      - docker-mongo_mongo-net
 

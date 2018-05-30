@@ -18,7 +18,6 @@
 ### TODO
   - fake profile et produit
   - ecrire documentation par projet
-  - referencé reseau ELK et mongo
   - create location /profils/:id, /search/products/:id, /speach/:text
   - check docker-snips
 

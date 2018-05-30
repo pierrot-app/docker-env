@@ -7,6 +7,8 @@ services:
     restart: always
     ports:
       - '27017:27017'
+    networks:
+      - mongo-net
     volumes:
      - ${MONGO_DATA_PATH}:/data/db
      - "$PWD/mongo-entrypoint/:/docker-entrypoint-initdb.d/"
@@ -22,6 +24,8 @@ services:
     restart: always
     ports:
       - 8081:8081
+    networks:
+      - mongo-net
     depends_on:
       - 'mongo'
     environment:
@@ -35,5 +39,5 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: ${BASICAUTH_PASSWORD}
 
 networks:
-  esnet:
+  mongo-net:
       driver: bridge

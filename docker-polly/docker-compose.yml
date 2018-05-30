@@ -1,7 +1,4 @@
 version: '3'
-networks:
-  node-default:
-    driver: bridge
 services:
   node:
     tty: true
@@ -16,4 +13,8 @@ services:
       - '3000-3020:3000-3020'
     command: npm run ${NODE_ENV}
     networks:
-      - node-default
+      - node-net
+      
+networks:
+  node-net:
+    driver: bridge
