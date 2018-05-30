@@ -22,4 +22,3 @@ echo "ALl microservices are connected !"
 echo "Start API middleware"
 cd ../docker-api && docker-compose up -d && cd ..
 echo "Containers started, let's play !"
-
