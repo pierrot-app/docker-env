@@ -1,5 +1,6 @@
 # Docker
-
+  - install docker for mac: https://store.docker.com/editions/community/docker-ce-desktop-mac 
+  
 ### Locations
   - ./ : default api middleware access
   - /profils : mongodb access
