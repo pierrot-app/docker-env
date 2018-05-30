@@ -31,7 +31,7 @@ RUN apt-get install -y apt-transport-https
 RUN apt-get install -y alsa-utils
 
 #Install mosquitto
-RUN apt-get install mosquitto mosquitto-clients
+RUN apt-get install -y libc-ares2 libmosquitto1 libwrap0 tcpd mosquitto mosquitto-clients
 
 # 1. Configure network access: WIFI
 # 2. Enable SSH
