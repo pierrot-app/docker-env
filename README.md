@@ -4,9 +4,10 @@
 ### Locations
   - ./ : default api middleware access
   - /profils : mongodb access
-  - /edits : kibana acess
+  - /kibana : kibana interface acess
+  - /mongo : mongodb interface
   - /speech : polly api access
-  - /serach : elasticsearch access
+  - /search : elasticsearch access
 
 ### Services :
 - docker-api = service-api : middleware api

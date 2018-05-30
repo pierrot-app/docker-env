@@ -41,3 +41,6 @@ RUN apt-get install -y snips-platform-voice
 
 #Install snips demo
 RUN apt-get install snips-platform-demo
+
+# cmd mqtt : adress + body{text}
+RUN mqtt localhost:7756 {"hello wolrd !"}
