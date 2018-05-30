@@ -1,18 +1,31 @@
 # Docker
 
-### Environnements :
-- api : middleware api
-- elk (elasticsearch, kibana, logstash): search product by score
-- mongo: save users profils
-- polly: TTS (create .mp3 response)
-- snips: dev and test 
+### Locations
+  - ./ : default api middleware access
+  - /profils : mongodb access
+  - /edits : kibana acess
+  - /speech : polly api access
+  - /serach : elasticsearch access
+
+### Services :
+- docker-api = service-api : middleware api
+- docker-elk = service-elk (elasticsearch, kibana, logstash): search product by score
+- docker-mongo = service-mongo: save users profils
+- docker-polly = service-polly: TTS (create .mp3 response)
+- docker-snips = service-debian : env for dev and test 
+
+### Basic bash script : 
+- bash docker-start-all.sh : start all containers
+- bash docker-stop-all.sh : stop all containers
+- bash docker-destroy-all.sh : destroy all containers and images
 
 ### Basic CMD : 
-- docker-compose build
-- docker-compose up
-- docker-compose up -d
-- docker ps -a
-- docker exec -i servicename bash
+- docker-compose build : build images
+- docker-compose up : up containers
+- docker-compose up -d : up containers in background
+- docker ps -a : list all conatiners
+- docker images : list all images
+- docker exec -i servicename bash : 
 
 ---------------------------
 ### TODO
