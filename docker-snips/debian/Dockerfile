@@ -27,8 +27,11 @@ RUN apt-get install -y lsb-release
 # HTTP transport
 RUN apt-get install -y apt-transport-https
 
-# get aplay cmd
+# Install aplay cmd
 RUN apt-get install -y alsa-utils
+
+#Install mosquitto
+RUN apt-get install mosquitto mosquitto-clients
 
 # 1. Configure network access: WIFI
 # 2. Enable SSH
@@ -39,8 +42,8 @@ RUN apt-key adv --keyserver pgp.mit.edu --recv-keys F727C778CCB0A455
 RUN apt-get update
 RUN apt-get install -y snips-platform-voice
 
-#Install snips demo
+# Install snips demo
 RUN apt-get install snips-platform-demo
 
-# cmd mqtt : adress + body{text}
-RUN mqtt localhost:7756 {"hello wolrd !"}
+# Test Snips
+RUN mosquitto_pub -h localhost -t test -m "hello world"
