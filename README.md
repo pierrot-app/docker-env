@@ -6,36 +6,36 @@
 ### 1. Présentation :
   La premiére étape du projet "Allo" a était d'achitecturer un MVP. Ce dernier est divisé en différentes "briques logiques", nos microservices. Cette architecture est porté par Docker et comprend 4 miscroservices interconnectées par une API middleware.
   
-  - Pour démarrer le projet, veuillez installer docker sur votre machine. Utilisez, par exemple, "Docker for Mac" disponible à l'URL suivante : https://store.docker.com/editions/community/docker-ce-desktop-mac 
+  - [Vue de l'architecture](https://github.com/pierrot-app/docker-env/blob/master/IMAGES/pierrot_mvp.png)
 
-
-  [link to Google!]()
-
+  - Pour dcommencer, veuillez installer docker sur votre machine. Utilisez, par exemple, "Docker for Mac" disponible à l'URL suivante : https://store.docker.com/editions/community/docker-ce-desktop-mac 
+  
 ### 2. Nos microservices :
 - Une API middleware de type REST permettant d'interconnecté les différents microservices entre-eux. C'est le point de connection et de routage des requetes provenant de l'extérieur avec les différentes logiques et bases de données de notre services.
     - dossier: docker-api 
     - nom: service-api
 
-- Une moteur de recherche et d'analyse RestFull et distribué basé sur Elasticsearch afin d'organiser la recherche des produits en fonction de tags retournant un score de pertinence spécifique pour une profil utilisateur donné. Le microservice comprendre une interface pour elasticsearch (moteur de recherche synthaxique), kibana (outils backoffice d'analyse graphique et d'indéxation des données) et logstash (aggrégation des différents logs applicatifs).
+- Une moteur de recherche et d'analyse RestFull, distribué et basé sur Elasticsearch. Il gére la recherche de produits en fonction des tags de celui-ci et des tags de l'utilisateur. Ce mécanisme retourne un score de pertinence spécifique pour chaque produit spécifiquement pour une profil donné. 
+Le microservice comprendre une API pour elasticsearch (moteur de recherche synthaxique), une interface kibana (outils backoffice d'analyse graphique et d'indexation des données) et un service logstash (aggrégation des différents logs applicatifs).
     - dossier: docker-elk
     - nom: service-elk
 
-- Une base de donné NoSQL distribuée MongoDB destinée a collecté les différents profils utilisateurs. Le microsevide dispose d'une interafce d'administration backoffice pour facilité la manipulation des data.
+- Une base de donné NoSQL distribuée MongoDB destinée a collecté les différents profils utilisateurs. Le microsevice dispose d'une interafce d'administration backoffice pour facilité la manipulation des data.
     - dossier: docker-mongo
     - nom: 
       - service-mongo
       - service-mongo-express
 
-- Une API TTS (text to speach) asynchrone de conversion des données textuelle en réponse audio format .wav par l'utilisation du service AWS Polly.
+- Une API TTS (text to speach) asynchrone de conversion des données textuelle en réponse audio format .wav par l'utilisation du service AWS Polly (.mp3).
     - dossier: docker-polly
     - nom: service-polly
 
-- Un environnement de développement FrontOffice SNIPS, pour le vocle, destiné a tester notre code métier, coté assistant vocal, sans l'utilisation d'un hardware spécifique.
+- Un environnement de développement FrontOffice SNIPS, pour le vocale, destiné a tester notre code métier, coté assistant vocal, sans l'utilisation d'un hardware spécifique.
   - dossier: docker-snips
   - nom: service-debian
 
 ### 3. Nos scripts de démarrage : 
-Afin de facilité l'utilisation d'un tel environnement nous avons automatisé certain process de démarrage par des script Bash.
+Afin de facilité l'utilisation d'un tel environnement nous avons automatisé certain process de démarrage par des scripts Bash.
 - Démarrage ou premiére installlation: téléchargement des images, construction des containers Docker et création des adresses hosts: 
     - bash docker-start-all.sh
 - Démarrage de l'environnement de développement FrontOffice SNIPS:

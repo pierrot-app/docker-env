@@ -1,6 +1,8 @@
 # Docker ELK
 
 ## Fake de data : 
+Il existe de multiple doublons pour chaque produits. Cependant, chaque produit répond a un liste de critéres (tags) trés spécifiques et est donc une réponse spécifique pour un utilisateur donnée.
+
 ```
   "produit": {
     "id": "765223456",
