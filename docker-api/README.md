@@ -1,4 +1,8 @@
-#### Docker API
+# Docker API Middleware
 
-##### app pierrotapp.host in your hosts file
-> 127.0.0.1 pierrotapp.host
+## Hosts file (./etc/hosts)
+```
+127.0.0.1 allo.host
+```
+
+## 1. API nodeJS avec le framworks ExpressJS

@@ -24,9 +24,6 @@ RUN apt-get install -y apt-transport-https
 # Install aplay cmd
 RUN apt-get install -y alsa-utils
 
-#Install mosquitto
-RUN apt-get install -y libc-ares2 libmosquitto1 libwrap0 tcpd mosquitto mosquitto-clients
-
 # Install Snips Platform
 RUN apt-get install -y dirmngr
 RUN bash -c  'echo "deb https://debian.snips.ai/$(lsb_release -cs) stable main" > /etc/apt/sources.list.d/snips.list'
@@ -37,5 +34,11 @@ RUN apt-get install -y snips-platform-voice
 # Install snips demo
 RUN apt-get install snips-platform-demo
 
+#Install mosquitto
+RUN apt-get install -y libc-ares2 libmosquitto1 libwrap0 tcpd mosquitto mosquitto-clients
+RUN apt-get update
+
 # Test Snips
-RUN mosquitto_pub -h localhost -t test -m "hello world"
+# RUN mosquitto_pub -h ip -t test -m "hello world"
+# ARG IP=127.0.0.1
+# RUN mosquitto_pub -h $IP -t 'hermes/dialogueManager/startSession' -m '{"init":{"type":"notification","text":"Hello world"}}'
