@@ -26,7 +26,7 @@ Le microservice comprendre une API pour elasticsearch (moteur de recherche synth
       - service-mongo
       - service-mongo-express
 
-- Une API TTS (text to speach) asynchrone de conversion des données textuelle en réponse audio format .wav par l'utilisation du service AWS Polly (.mp3).
+- Une API TTS (text to speech) asynchrone de conversion des données textuelle en réponse audio format .wav par l'utilisation du service AWS Polly (.mp3).
     - dossier: docker-polly
     - nom: service-polly
 
